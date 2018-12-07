@@ -4,10 +4,10 @@ one:
   name: MyString
   phone: MyString
   email: MyString
-  kind: one
+  category: one
 
 two:
   name: MyString
   phone: MyString
   email: MyString
-  kind: two
+  category: two

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_07_131907) do
+ActiveRecord::Schema.define(version: 2018_12_07_135402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,24 +28,18 @@ ActiveRecord::Schema.define(version: 2018_12_07_131907) do
     t.string "name"
     t.string "phone"
     t.string "email"
-    t.bigint "kind_id"
+    t.bigint "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["kind_id"], name: "index_agents_on_kind_id"
+    t.index ["category"], name: "index_agents_on_category"
   end
 
-  create_table "kind_humen", force: :cascade do |t|
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "kinds", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "addresses", "agents"
-  add_foreign_key "agents", "kinds"
+  add_foreign_key "agents", "categories", column: "category"
 end

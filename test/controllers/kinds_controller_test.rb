@@ -1,48 +1,48 @@
 require 'test_helper'
 
-class KindsControllerTest < ActionDispatch::IntegrationTest
+class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @kind = kinds(:one)
+    @category = categories(:one)
   end
 
   test "should get index" do
-    get kinds_url
+    get categories_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_kind_url
+    get new_category_url
     assert_response :success
   end
 
-  test "should create kind" do
-    assert_difference('Kind.count') do
-      post kinds_url, params: { kind: { description: @kind.description } }
+  test "should create category" do
+    assert_difference('category.count') do
+      post categories_url, params: { category: { description: @category.description } }
     end
 
-    assert_redirected_to kind_url(Kind.last)
+    assert_redirected_to category_url(category.last)
   end
 
-  test "should show kind" do
-    get kind_url(@kind)
+  test "should show category" do
+    get category_url(@category)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_kind_url(@kind)
+    get edit_category_url(@category)
     assert_response :success
   end
 
-  test "should update kind" do
-    patch kind_url(@kind), params: { kind: { description: @kind.description } }
-    assert_redirected_to kind_url(@kind)
+  test "should update category" do
+    patch category_url(@category), params: { category: { description: @category.description } }
+    assert_redirected_to category_url(@category)
   end
 
-  test "should destroy kind" do
-    assert_difference('Kind.count', -1) do
-      delete kind_url(@kind)
+  test "should destroy category" do
+    assert_difference('category.count', -1) do
+      delete category_url(@category)
     end
 
-    assert_redirected_to kinds_url
+    assert_redirected_to categories_url
   end
 end

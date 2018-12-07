@@ -15,7 +15,7 @@ class AgentsTest < ApplicationSystemTestCase
     click_on "New Agent"
 
     fill_in "Email", with: @agent.email
-    fill_in "Kind", with: @agent.kind_id
+    fill_in "Category", with: @agent.category_id
     fill_in "Name", with: @agent.name
     fill_in "Phone", with: @agent.phone
     click_on "Create Agent"
@@ -29,7 +29,7 @@ class AgentsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Email", with: @agent.email
-    fill_in "Kind", with: @agent.kind_id
+    fill_in "Category", with: @agent.category_id
     fill_in "Name", with: @agent.name
     fill_in "Phone", with: @agent.phone
     click_on "Update Agent"

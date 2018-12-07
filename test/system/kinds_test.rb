@@ -1,20 +1,20 @@
 require "application_system_test_case"
 
-class KindsTest < ApplicationSystemTestCase
+class CategoriesTest < ApplicationSystemTestCase
   setup do
-    @kind = kinds(:one)
+    @category = categories(:one)
   end
 
   test "visiting the index" do
-    visit kinds_url
-    assert_selector "h1", text: "Kinds"
+    visit categories_url
+    assert_selector "h1", text: "Categories"
   end
 
   test "creating a Kind" do
-    visit kinds_url
+    visit categories_url
     click_on "New Kind"
 
-    fill_in "Description", with: @kind.description
+    fill_in "Description", with: @category.description
     click_on "Create Kind"
 
     assert_text "Kind was successfully created"
@@ -22,10 +22,10 @@ class KindsTest < ApplicationSystemTestCase
   end
 
   test "updating a Kind" do
-    visit kinds_url
+    visit categories_url
     click_on "Edit", match: :first
 
-    fill_in "Description", with: @kind.description
+    fill_in "Description", with: @category.description
     click_on "Update Kind"
 
     assert_text "Kind was successfully updated"
@@ -33,7 +33,7 @@ class KindsTest < ApplicationSystemTestCase
   end
 
   test "destroying a Kind" do
-    visit kinds_url
+    visit categories_url
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
