@@ -1,3 +1,5 @@
 class Agent < ApplicationRecord
-  belongs_to :category
+  enum category: [:coordenador, :voluntario, :usuario]
+  enum status: [:ativo, :inativo]
+  has_one :address
 end

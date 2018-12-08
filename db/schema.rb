@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_07_170206) do
+ActiveRecord::Schema.define(version: 2018_12_08_193203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,16 +28,9 @@ ActiveRecord::Schema.define(version: 2018_12_07_170206) do
     t.string "name"
     t.string "phone"
     t.string "email"
-    t.bigint "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category"], name: "index_agents_on_category"
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "category"
   end
 
   create_table "events", force: :cascade do |t|
@@ -51,5 +44,4 @@ ActiveRecord::Schema.define(version: 2018_12_07_170206) do
   end
 
   add_foreign_key "addresses", "agents"
-  add_foreign_key "agents", "categories", column: "category"
 end
