@@ -1,5 +1,6 @@
 class Agent < ApplicationRecord
-  enum category: [:coordenador, :voluntario, :usuario]
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  enum category: [:tecnico, :coordenador, :voluntario, :usuario]
   enum status: [:ativo, :inativo]
-  has_one :address
 end
