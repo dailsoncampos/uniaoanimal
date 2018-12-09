@@ -6,23 +6,5 @@ os:
 
 rvm:
   - jruby
-  - 1.9.2
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.1.5
+  - 2.5.1
 
-jobs:
-  include:
-    - stage: deploy
-      if: branch = master
-      os: linux
-      rvm: 2.0.0
-      deploy:
-        provider: rubygems
-        api_key:
-          secure: KcBpkFaes74KGMm8X/rRA8e13+t3PmkefsAvOAR+iF4g1GyuLSPkP92Fb9vFfsXBph+qmFh5rNa2lIRf/3RXW6COxY7CMMaARxUfJOKE0rmIwF0qfKI+RZDh6abg92iYngunMZVN8WVft6Lv9ZTOYCWxr1Zs1Ll/Rl4PfvHNd1g=
-        gem: travis
-        on:
-          repo: travis-ci/travis.rb
-          ruby: 2.0.0
