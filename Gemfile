@@ -7,6 +7,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'rails_admin'
 gem 'devise'
+gem 'cancancan'
 gem 'haml'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
