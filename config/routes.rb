@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :events
   resources :addresses
   resources :agents
+  root to: 'home#index'
 end
