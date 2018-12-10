@@ -24,11 +24,14 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
+    dashboard do
+      statistics false
+    end
+    index
     new
     export
     bulk_delete
+    
     show
     edit
     delete

@@ -24,6 +24,11 @@
               %a.nav-link{:href => "#"} Sobre
             %li.nav-item
               %a.nav-link{:href => "#"} Contato
+            %li.nav-item
+              = link_to('Logout', destroy_agent_session_path, method: :delete)
+            %li.nav-item
+              = link_to('Login', new_agent_session_path)
+
     .container
       .row.my-4
         .col-lg-8
