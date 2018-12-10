@@ -1,76 +1,39 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %meta{:charset => "utf-8"}
-    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
-    %meta{:content => "", :name => "description"}
-    %meta{:content => "", :name => "author"}
-    %title União Animal
-    %link{:href => "application.scss", :rel => "stylesheet"}
-  %body
-    %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
-      .container
-        %a.navbar-brand{:href => "#"} União Animal
-        %button.navbar-toggler{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
-          %span.navbar-toggler-icon
-        #navbarResponsive.collapse.navbar-collapse
-          %ul.navbar-nav.ml-auto
-            %li.nav-item.active
-              %a.nav-link{:href => "#"}
-                Home
-                %span.sr-only (current)
-            %li.nav-item
-              %a.nav-link{:href => "#"} Sobre
-            %li.nav-item
-              %a.nav-link{:href => "#"} Contato
-            %li.nav-item
-              = link_to('Logout', destroy_agent_session_path, method: :delete)
-            %li.nav-item
-              = link_to('Login', new_agent_session_path)
+.container
+  .row.my-4
+    .col-lg-8
+      %img.img-fluid.rounded{:alt => "", :src => "http://placehold.it/900x400"}
+    .col-lg-4
+      %h1 Lorem ipsum
+      %ul
+        %li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        %li Mauris non ligula feugiat, sodales odio at, venenatis lacus.
+        %li Praesent sed elit nec tortor congue auctor.
+        %li Nulla at nulla et enim iaculis vulputate.
+        %li In venenatis nunc et lectus convallis semper.
 
-    .container
-      .row.my-4
-        .col-lg-8
-          %img.img-fluid.rounded{:alt => "", :src => "http://placehold.it/900x400"}
-        .col-lg-4
-          %h1 Lorem ipsum
-          %ul
-            %li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            %li Mauris non ligula feugiat, sodales odio at, venenatis lacus.
-            %li Praesent sed elit nec tortor congue auctor.
-            %li Nulla at nulla et enim iaculis vulputate.
-            %li In venenatis nunc et lectus convallis semper.
-
-      .card.text-white.bg-secondary.my-4.text-center
+  .card.text-white.bg-secondary.my-4.text-center
+    .card-body
+      %p.text-white.m-0 Sed posuere tincidunt porttitor. Suspendisse potenti. Praesent ultricies, lacus sed accumsan eleifend, justo lacus congue est, ac aliquam quam.
+  .row
+    .col-md-4.mb-4
+      .card.h-100
         .card-body
-          %p.text-white.m-0 Sed posuere tincidunt porttitor. Suspendisse potenti. Praesent ultricies, lacus sed accumsan eleifend, justo lacus congue est, ac aliquam quam.
-      .row
-        .col-md-4.mb-4
-          .card.h-100
-            .card-body
-              %h2.card-title Card One
-              %p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
-            .card-footer
-              %a.btn.btn-primary{:href => "#"} More Info
-        .col-md-4.mb-4
-          .card.h-100
-            .card-body
-              %h2.card-title Card Two
-              %p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.
-            .card-footer
-              %a.btn.btn-primary{:href => "#"} More Info
-        .col-md-4.mb-4
-          .card.h-100
-            .card-body
-              %h2.card-title Eventos
-              %p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
-            .card-footer
-              %a.btn.btn-primary{:href => "/eventos"} More Info
-    %footer.py-5.bg-dark
-      .container
-        %p.m-0.text-center.text-white
-          Copylate © União Animal - 2018 | Desenvolvido por
-          %a{:href => "#"} @dailsoncampos
-    %script{:src => "vendor/jquery/jquery.min.js"}
-    %script{:src => "vendor/bootstrap/js/bootstrap.bundle.min.js"}
+          %h2.card-title Card One
+          %p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
+        .card-footer
+          %a.btn.btn-primary{:href => "#"} More Info
+    .col-md-4.mb-4
+      .card.h-100
+        .card-body
+          %h2.card-title Card Two
+          %p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.
+        .card-footer
+          %a.btn.btn-primary{:href => "#"} More Info
+    .col-md-4.mb-4
+      .card.h-100
+        .card-body
+          %h2.card-title Eventos
+          %p.card-text Fique por dentro da nossa agenda de eventos, e venha nos prestigiar com sua presença. Você será muito bem vindo(a)!
+        .card-footer
+          %a.btn.btn-primary{:href => "/eventos"} Veja
+
