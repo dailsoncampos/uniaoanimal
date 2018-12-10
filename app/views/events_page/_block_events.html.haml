@@ -5,11 +5,19 @@
   .col-md-5
     %h2
       = event.title
+
+    %p 
+      Local:
+      = event.place
+
+    %p 
+      Data:
+      = event.date.strftime("%d/%m/%y")
+
+    %p 
+      A partir das:
+      = event.time.strftime("%R h")
+
     %p
-    Local:
-    = event.place
-    %p
-    A partir das:
-    = event.time.strftime("%R h")
-    %p
-    = event.rmk
+      Nota
+      = event.rmk
