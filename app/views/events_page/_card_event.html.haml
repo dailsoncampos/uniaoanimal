@@ -1,0 +1,16 @@
+- @events.each_with_index do |event, index|
+  .card-event.my-2
+    .col-sm-7.float-left
+      = image_tag event.image, class: "img-fluid rounded mb-3 mb-sm-0"
+    .col-sm-5.float-right
+      %h2
+        = event.title
+      %p 
+        Local:
+        = event.place
+      %p 
+        Data:
+        = event.date.strftime("%d/%m/%y")
+      %p 
+        A partir das:
+        = event.time.strftime("%R h")
