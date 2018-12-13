@@ -3,11 +3,9 @@ rvm:
   - 2.5.1
 dist: precise
 before_script:
-  - bundle exec rake db:create --all
-  - bundle exec rake db:migrate
+  - bundle exec rails db:create --all
+  - bundle exec rails db:migrate
 script:
-  - bundle exec rake ci:tests
+  - bundle exec rails db:seed
 services:
   - postgresql
-notifications:
-  email: false
