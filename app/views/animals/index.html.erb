@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Animals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Condition</th>
+      <th>Species</th>
+      <th>Pelage</th>
+      <th>Color</th>
+      <th>Genre</th>
+      <th>Breed</th>
+      <th>Size</th>
+      <th>Status</th>
+      <th>Agent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animals.each do |animal| %>
+      <tr>
+        <td><%= animal.name %></td>
+        <td><%= animal.condition %></td>
+        <td><%= animal.species %></td>
+        <td><%= animal.pelage %></td>
+        <td><%= animal.color %></td>
+        <td><%= animal.genre %></td>
+        <td><%= animal.breed %></td>
+        <td><%= animal.size %></td>
+        <td><%= animal.status %></td>
+        <td><%= animal.agent %></td>
+        <td><%= link_to 'Show', animal %></td>
+        <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Animal', new_animal_path %>
