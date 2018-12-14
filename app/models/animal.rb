@@ -7,5 +7,5 @@ class Animal < ApplicationRecord
   enum color: [:preto, :branco, :alaranjado, :caramelo, :rajado]
   enum genre: [:macho, :femea]
   enum size: [:pequeno, :medio, :grande]
-  enum status: [:disponível, :indisponivel]
+  enum status: [:disponivel, :indisponivel]
 end
