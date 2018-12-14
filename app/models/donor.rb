@@ -1,3 +1,5 @@
 class Donor < ApplicationRecord
-  enum status: [:financeira, :medicamento, :alimento, :outro]
+  enum donation: [:financeira, :medicamento, :alimento, :outro]
+
+  validates_presence_of :name, :phone, :email
 end
