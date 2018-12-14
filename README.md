@@ -1,24 +1,9 @@
-# README
+# União Animal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este repositório é exclusivo para o desenvolvimento do site da ONG **União Animal** para ajudar em suas atividades, e ao mesmo tempo utilizá-lo para testar tecnologias referentes ao desenvolvimento web.
 
-Things you may want to cover:
+## Instalação
 
-* Ruby version
+Caso você esteja interessado em ajudar no desenvolvimento deste projeto, criamos o wiki documentando as ferramentas utilizadas no projeto e as instruções de como instalá-las.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Configuração do ambiente de desenvolvimento](https://github.com/dailson/uniaoanimal/wiki/Ambiente-de-desenvolvimento)
