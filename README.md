@@ -6,4 +6,4 @@ Este repositório é exclusivo para o desenvolvimento do site da ONG **União An
 
 Caso você esteja interessado em ajudar no desenvolvimento deste projeto, criamos o wiki documentando as ferramentas utilizadas no projeto e as instruções de como instalá-las.
 
-* [Configuração do ambiente de desenvolvimento](https://github.com/dailson/uniaoanimal/wiki/Ambiente-de-desenvolvimento)
+* [Configuração do ambiente de desenvolvimento](https://github.com/dailsoncampos/uniaoanimal/wiki/Ambiente-de-desenvolvimento)
