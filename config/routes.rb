@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :sectors
   resources :donors
   get '/eventos', to: "events_page#index"
   # get '/eventos/:id', to: "events_page#show", as: :evento
