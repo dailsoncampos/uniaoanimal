@@ -1,5 +1,6 @@
 class Animal < ApplicationRecord
   belongs_to :agent
+  has_one_attached :image
 
   enum condition: [:filhote, :adulto, :idoso, :especial]
   enum species: [:cachorro, :gato]
