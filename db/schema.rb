@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_195703) do
+ActiveRecord::Schema.define(version: 2018_12_14_190949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,15 +36,6 @@ ActiveRecord::Schema.define(version: 2018_12_10_195703) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "addresses", force: :cascade do |t|
-    t.string "street"
-    t.string "sector"
-    t.bigint "agent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["agent_id"], name: "index_addresses_on_agent_id"
-  end
-
   create_table "agents", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -57,8 +48,36 @@ ActiveRecord::Schema.define(version: 2018_12_10_195703) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "street"
+    t.integer "sector"
     t.index ["email"], name: "index_agents_on_email", unique: true
     t.index ["reset_password_token"], name: "index_agents_on_reset_password_token", unique: true
+  end
+
+  create_table "animals", force: :cascade do |t|
+    t.string "name"
+    t.integer "condition"
+    t.integer "species"
+    t.string "pelage"
+    t.integer "color"
+    t.integer "genre"
+    t.string "breed"
+    t.integer "size"
+    t.integer "status"
+    t.bigint "agent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agent_id"], name: "index_animals_on_agent_id"
+  end
+
+  create_table "donors", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
+    t.integer "donation"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -71,6 +90,15 @@ ActiveRecord::Schema.define(version: 2018_12_10_195703) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tutors", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "preferences", array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "addresses", "agents"
+  add_foreign_key "animals", "agents"
 end

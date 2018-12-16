@@ -7,7 +7,7 @@ class Ability
         can :access, :rails_admin
         can :dashboard
         can :read, Event, status: :ativo
-        can :manage, Address, agent_id: agent.id
+#         can :manage, Address, agent_id: agent.id
       elsif agent.category == 'coordenador' || agent.category == 'tecnico'
         can :manage, :all
       end
