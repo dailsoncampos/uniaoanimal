@@ -2,13 +2,15 @@
 @import "home";
 @import "signin";
 @import "card_event";
+@import "shared/_navbar";
 
-body {
-  padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
+.bg-default {
+  background-color: #4397D2 !important;
+  a {
+    color: #fff;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
