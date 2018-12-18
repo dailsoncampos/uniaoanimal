@@ -1,6 +1,7 @@
-%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-default.py-3
   .container
-    %a.navbar-brand{:href => "/"} União Animal
+    = link_to "/", title: 'União Animal', class:'navbar-brand', target: '_self' do
+      = image_tag "logo-ong-uniao-animal.png", alt:"Logo da ONG união animal", height: "64", width: "192", src: "logo-ong-uniao-animal.png"
     %button.navbar-toggler{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
       %span.navbar-toggler-icon
     #navbarResponsive.collapse.navbar-collapse
