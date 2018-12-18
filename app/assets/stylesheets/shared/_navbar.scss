@@ -1,0 +1,22 @@
+.bg-default {
+  background-color: #4397D2 !important;
+  a {
+    color: #fff;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.bg-nav{
+  background-color: #4397D2;
+  font-weight: bold;
+  font-size: 20px;
+  li:hover {
+    background-color: #fff;
+  }
+  li:hover a {
+    color: #4397D2 !important;
+  }
+}

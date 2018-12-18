@@ -4,13 +4,17 @@
 @import "card_event";
 @import "shared/_navbar";
 
-.bg-default {
-  background-color: #4397D2 !important;
-  a {
-    color: #fff;
-    font-weight: bold;
-    &:hover {
-      text-decoration: underline;
-    }
+@font-face{
+  font-family: "Helvetica Neue Ultra Light"; src: font-url("HelveticaNeueUltraLight") format("truetype");
+  font-family: "Helvetica Neue Light Ext"; src: url('HelveticaNeue-LightExt.otf') format("truetype");
+}
+
+.card-title{
+  font-family: "Helvetica Neue Light Ext";
+}
+
+.card-body, .card-text {
+  p li{
+    font-family: "Helvetica Neue Ultra Light";
   }
 }

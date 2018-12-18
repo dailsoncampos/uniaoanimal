@@ -1,4 +1,4 @@
-%nav.navbar.navbar-expand-lg.navbar-dark.bg-default.py-3
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-nav.py-0
   .container
     = link_to "/", title: 'União Animal', class:'navbar-brand', target: '_self' do
       = image_tag "logo-ong-uniao-animal.png", alt:"Logo da ONG união animal", height: "64", width: "192", src: "logo-ong-uniao-animal.png"
@@ -6,15 +6,15 @@
       %span.navbar-toggler-icon
     #navbarResponsive.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto
-        %li.nav-item.active
+        %li.nav-item.py-4.px-3.active
           %a.nav-link{:href => "/"}
-            Home
+            Início
             %span.sr-only (current)
-        %li.nav-item
+        %li.nav-item.py-4.px-3
           %a.nav-link{:href => "#"} Sobre
-        %li.nav-item
+        %li.nav-item.py-4.px-3
           %a.nav-link{:href => "#"} Contato
-        %li.nav-item
+        %li.nav-item.py-4.px-3
           %a.nav-link{:href => "/dashboard"} Entrar
         -# %li.nav-item
         -#   %a.nav-link{:href => destroy_agent_session_path(method: :delete)} Sair
