@@ -3,6 +3,7 @@
   max-width: 330px;
   padding: 15px;
   margin: auto;
+  min-height: 719px;
 }
 .form-signin .checkbox {
   font-weight: 400;
@@ -26,4 +27,9 @@
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.btn-login{
+  background-color: #4397D2;
+  color: #fff;
 }
