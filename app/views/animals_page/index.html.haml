@@ -1,0 +1,41 @@
+.container
+  / Page Heading
+  %h1.my-4
+    Page Heading
+    %small Secondary Text
+  .row
+    .col-lg-6.portfolio-item.mb-5
+      .card.h-100
+        %a{:href => "#"}
+          %img.card-img-top{:alt => "", :src => "http://placehold.it/700x400"}
+        .card-body
+          %h4.card-title
+            %a{:href => "#"} Filhotes
+          %p.card-text Veja os focinhos filhotes disponíveis para adoção
+    .col-lg-6.portfolio-item.mb-5
+      .card.h-100
+        = link_to search_show_path(condition: "adulto") do
+          %img.card-img-top{:alt => "", :src => "http://placehold.it/700x400"}
+          .card-body
+            %h4.card-title
+              %a{:href => "#"} Adultos
+            %p.card-text Veja os focinhos adultos disponíveis para adoção
+
+    .col-lg-6.portfolio-item.mb-5
+      .card.h-100
+        -# %a{:href => "#"}
+        = link_to search_show_path(condition: "idoso") do
+          %img.card-img-top{:alt => "", :src => "http://placehold.it/700x400"}
+          .card-body
+            %h4.card-title
+              Idosos
+            %p.card-text Veja os focinhos idosos disponíveis para adoção
+
+    .col-lg-6.portfolio-item.mb-5
+      .card.h-100
+        %a{:href => "#"}
+          %img.card-img-top{:alt => "", :src => "http://placehold.it/700x400"}
+        .card-body
+          %h4.card-title
+            %a{:href => "#"} Especiais
+          %p.card-text Veja os focinhos especiais disponíveis para adoção
