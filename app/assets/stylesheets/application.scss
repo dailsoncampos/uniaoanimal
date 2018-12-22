@@ -2,6 +2,7 @@
 @import "home";
 @import "devise/signin";
 @import "card_event";
+@import "animals_page";
 @import "shared/_navbar";
 
 @font-face{
@@ -11,6 +12,16 @@
 
 .card-title{
   font-family: "Helvetica Neue Light Ext";
+}
+
+.card_animal{
+  a {
+    color: #666;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .card-body, .card-text {
