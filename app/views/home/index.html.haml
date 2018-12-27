@@ -1,20 +1,24 @@
 .container
-  .row.my-4
+  .row
     .col-lg-8
-      %img.img-fluid.rounded{:alt => "", :src => "http://placehold.it/900x400"}
+      = image_tag "capa_uniao_animal.jpg", class: "img-fluid rounded", alt:"", src: "capa_uniao_animal.jpg"
     .card.col-lg-4
-      %h1.card-title Lorem ipsum
+      %h1.card-title Ao adotar um animal, você estará:
       .card-text
         %ul
-          %li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          %li Mauris non ligula feugiat, sodales odio at, venenatis lacus.
+          %li Tirando animais abandonados das ruas
+          %li Ajudando animais mal tratados
+          %li 
           %li Praesent sed elit nec tortor congue auctor.
-          %li Nulla at nulla et enim iaculis vulputate.
-          %li In venenatis nunc et lectus convallis semper.
+          %li Praesent sed elit nec tortor congue auctor.
 
-  .card.text-white.bg-secondary.text-center
-    .card-body
-      %p.text-white.m-0 Sed posuere tincidunt porttitor. Suspendisse potenti. Praesent ultricies, lacus sed accumsan eleifend, justo lacus congue est, ac aliquam quam.
+  .row
+    .card.col-lg-12.text-white.bg-secondary.text-center.mt-4.ml-1.mr-1
+      .card-body
+        %p.text-white.m-0
+          NÃO 
+          %b COMPRE, 
+          %b ADOTE!
   .row.my-4
     .col-md-4.mb-4
       .card.h-100
