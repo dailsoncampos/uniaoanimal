@@ -10,8 +10,12 @@
   font-family: "Helvetica Neue Light Ext"; src: url('HelveticaNeue-LightExt.otf') format("truetype");
 }
 
-.card-title{
+.card-title, .card-title-header{
   font-family: "Helvetica Neue Light Ext";
+}
+
+.card-title-header{
+  font-size: 2em;
 }
 
 .card_animal{

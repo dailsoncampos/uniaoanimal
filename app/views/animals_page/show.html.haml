@@ -1,4 +1,8 @@
-- @animals_found.each do |animal|
-  %p
-    = animal.name
-  
+.container
+	.row
+		.col-sm-12
+			%h2.my-4.text-center Pesquise e encontre o seu novo amigo
+		.col-sm-3
+			= render 'filter'
+		.col-sm-9
+			= render 'main_content'
