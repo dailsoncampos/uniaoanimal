@@ -16,7 +16,7 @@
 }
 
 body{
-  h1, h2{
+  h1, h2, .nav-link{
     font-family: "Montserrat";
   }
   p{
@@ -29,7 +29,7 @@ body{
 }
 
 .card{
-  border-color: #666;
+  border: 1px solid #ced4da;
 }
 
 .card_animal{
