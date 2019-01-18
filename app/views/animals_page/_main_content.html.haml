@@ -1,0 +1,5 @@
+.text-center.mb-4
+  - @animals_found.each do |animal|
+    = image_tag animal.image.variant(resize: "200x200>"), class: "rounded-circle img-fluid mb-3 mx-3"
+    -# %h3
+    -# 	= animal.name

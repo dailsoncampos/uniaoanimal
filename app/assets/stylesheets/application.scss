@@ -4,14 +4,32 @@
 @import "card_event";
 @import "animals_page";
 @import "shared/_navbar";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-@font-face{
-  font-family: "Helvetica Neue Ultra Light"; src: font-url("HelveticaNeueUltraLight") format("truetype");
-  font-family: "Helvetica Neue Light Ext"; src: url('HelveticaNeue-LightExt.otf') format("truetype");
+@font-face {
+  font-family: "Montserrat"; src: url('montserrat.otf') format("truetype");
 }
 
-.card-title{
-  font-family: "Helvetica Neue Light Ext";
+@font-face {
+  font-family:"Montserrat-Light"; src: url('Montserrat-Light.otf') format("truetype");
+}
+
+body{
+  h1, h2{
+    font-family: "Montserrat";
+  }
+  p{
+    font-family: "Montserrat-Light";
+  }
+}
+
+.card-title-header{
+  font-size: 2em;
+}
+
+.card{
+  border-color: #666;
 }
 
 .card_animal{
@@ -21,11 +39,5 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-}
-
-.card-body, .card-text {
-  p li{
-    font-family: "Helvetica Neue Ultra Light";
   }
 }
