@@ -13,8 +13,8 @@
     = form.text_field :phone, class:'form-control mt-4', placeholder:'Telefone'
   
     = form.text_field :email, class:'form-control mt-4', placeholder:'Email'
-
-    = form.select(:donation, @donations_options_for_select, class: "form-control")
+    
+    = form.select(:donation, @donations_options_for_select, {}, {class: "form-control mt-4"})
   
     = form.text_area :message, class:'form-control mt-4', placeholder:'Descrição'
     .actions
