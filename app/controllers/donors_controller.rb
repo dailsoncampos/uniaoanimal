@@ -15,10 +15,12 @@ class DonorsController < ApplicationController
   # GET /donors/new
   def new
     @donor = Donor.new
+    @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}
   end
 
   # GET /donors/1/edit
   def edit
+    @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}
   end
 
   # POST /donors
