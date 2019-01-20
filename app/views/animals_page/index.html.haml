@@ -1,38 +1,7 @@
 .container
-  %h1.my-4
-    Condições de pets para adoção
   .row
-    .col-lg-6.portfolio-item.mb-5
-      .card_animal.h-100
-        = link_to search_show_path(condition: "filhote") do
-          = image_tag "filhotes.jpg", class: "img-fluid rounded", alt:"", src: "filhotes.jpg"
-          .card-body
-            %h4.card-title
-              Filhotes
-            %p.card-text Veja os focinhos filhotes disponíveis para adoção
-    .col-lg-6.portfolio-item.mb-5
-      .card_animal.h-100
-        = link_to search_show_path(condition: "adulto") do
-          = image_tag "adultos.jpg", class: "img-fluid rounded", alt:"", src: "adultos.jpg"
-          .card-body
-            %h4.card-title
-              Adultos
-            %p.card-text Veja os focinhos adultos disponíveis para adoção
 
-    .col-lg-6.portfolio-item.mb-5
-      .card_animal.h-100
-        = link_to search_show_path(condition: "idoso") do
-          = image_tag "idosos.jpg", class: "img-fluid rounded", alt:"Gato branco encostando a cabeça em um cachorro com pelagem com predominância branca, com detalhes marrons", src: "idosos.jpg"
-          .card-body
-            %h4.card-title
-              Idosos
-            %p.card-text Veja os focinhos idosos disponíveis para adoção
-
-    .col-lg-6.portfolio-item.mb-5
-      .card_animal.h-100
-        = link_to search_show_path(condition: "especial") do
-          = image_tag "especiais.jpg", class: "img-fluid rounded", alt:"", src: "especiais.jpg"
-          .card-body
-            %h4.card-title
-              Especiais
-            %p.card-text Veja os focinhos especiais disponíveis para adoção
+    .col-sm-3
+      = render 'filter'
+    .col-sm-9
+      = render 'main_content'
