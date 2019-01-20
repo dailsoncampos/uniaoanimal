@@ -1,9 +1,9 @@
 class AnimalsPageController < ApplicationController
   def index
-    @animals = Animal.all.order(date: :desc)
+    @animals_found = Animal.all
   end
 
   def show
-    @animals_found = Animal.where(condition: params[:condition])
+    # @animals_found = Animal.all
   end
 end
