@@ -15,12 +15,12 @@ class DonorsController < ApplicationController
   # GET /donors/new
   def new
     @donor = Donor.new
-    @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}
+    donation_for_select
   end
 
   # GET /donors/1/edit
   def edit
-    @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}
+    donation_for_select
   end
 
   # POST /donors
@@ -64,6 +64,10 @@ class DonorsController < ApplicationController
   end
 
   private
+
+    def donation_for_select
+      @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_donor
       @donor = Donor.find(params[:id])
