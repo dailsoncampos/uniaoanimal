@@ -3,12 +3,15 @@
 		.col-md-8
 			%img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
 		.col-md-4.card
-			%h3.my-3 Nome do animal
+			%h3.my-3
+				= @animal.name
 			%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
 			%h3.my-3 Detalhes do animal
 			%ul
-				%li Gênero
-				%li Condição
+				%li
+					= @animal.genre.titleize
+				%li
+					= @animal.condition.titleize
 				%li Pelagem
 				%li Vacinação
 				%li Castração
