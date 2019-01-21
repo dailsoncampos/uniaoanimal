@@ -1,31 +1,21 @@
 .row
   .col-sm-12
-    %h2.my-4.text-center Procure e encontre o seu novo amigo
+    %h1.my-4.text-center Procure e encontre o seu novo amigo
   - @animals_found.each do |animal|
     .col-lg-3.col-md-4.col-sm-6.portfolio-item
       .card
         .animal-img
-          = image_tag animal.image.variant(resize: "200x200>"), class: "img-fluid"
+          = link_to search_show_path(animal) do
+            -# = image_tag animal.image.variant(resize: "200x200>"), class: "img-fluid"
+            %img.img-fluid{class: "img-fluid", :alt => "", :src => "http://placehold.it/200x200"}
         .animal-description.pl-2.pt-2
-          %h4
-            = animal.name
-          %p
-            = animal.genre
-          %p
-            = animal.condition
+          = link_to search_show_path(animal) do
+            %h4
+              = animal.name
+            %p
+              = animal.genre
+            %p
+              = animal.condition
 
-%ul.pagination.justify-content-center
-  %li.page-item
-    %a.page-link{"aria-label" => "Previous", :href => "#"}
-      %span{"aria-hidden" => "true"} «
-      %span.sr-only Previous
-  %li.page-item
-    %a.page-link{:href => "#"} 1
-  %li.page-item
-    %a.page-link{:href => "#"} 2
-  %li.page-item
-    %a.page-link{:href => "#"} 3
-  %li.page-item
-    %a.page-link{"aria-label" => "Next", :href => "#"}
-      %span{"aria-hidden" => "true"} »
-      %span.sr-only Next
+.pagination.justify-content-center
+  = will_paginate @animals_found, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

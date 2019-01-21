@@ -1,8 +1,19 @@
 .container
-	.row
-		.col-sm-12
-			%h2.my-4.text-center Pesquise e encontre o seu novo amigo
-		.col-sm-3
-			= render 'filter'
-		.col-sm-9
-			= render 'main_content'
+	.row.mb-4
+		.col-md-8
+			%img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
+		.col-md-4.card
+			%h3.my-3
+				= @animal.name
+			%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
+			%h3.my-3 Detalhes do animal
+			%ul
+				%li
+					= @animal.genre.titleize
+				%li
+					= @animal.condition.titleize
+				%li Pelagem
+				%li Vacinação
+				%li Castração
+
+			%button.btn.btn-login.btn-lg.mb-2{:type => "button"} Solicitar adoção
