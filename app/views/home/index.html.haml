@@ -1,9 +1,10 @@
 .container
   .row
-    .col-lg-8
-      = image_tag "capa_uniao_animal.jpg", class: "img-fluid rounded", alt:"", src: "capa_uniao_animal.jpg"
-    .card.col-lg-4
-      %h1.card-title-header Ao adotar um animal, você estará:
+    .col-md-8
+      = image_tag "capa_uniao_animal.jpg", class: "img-fluid", src: "capa_uniao_animal.jpg"
+    .card.col-md-4
+      %h1.card-title-header
+        Ao adotar um animal, você estará:
       .card-text
         %p.mt-3 Diminuindo o abandono
         %p Mudando a vida do peludo
@@ -11,17 +12,16 @@
         %p Salvando vidas
         %p Ganhando um amigo
 
-  .row
-    .card.col-lg-12.text-white.bg-secondary.text-center.mt-4.ml-1.mr-1
-      .card-body
-        %p.text-white.m-0
-          Seja 
-          %b
-            gato
-          ou
-          %b
-            cachorro,
-          sua vida fica muito mais feliz com um animal de estimação. 
+  .card_friendly.text-center.my-4
+    %p.my-3
+      Seja 
+      %b
+        gato
+      ou
+      %b
+        cachorro,
+      sua vida fica muito mais feliz com um animal de estimação
+
   .row.my-4
     .col-md-4.mb-4
       .card.h-100
