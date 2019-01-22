@@ -13,6 +13,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'faker'
 gem 'will_paginate-bootstrap4'
 gem 'friendly_id', '~> 5.2.4'
+gem 'ransack'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

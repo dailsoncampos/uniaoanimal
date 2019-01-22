@@ -1,43 +1,5 @@
 %h3.my-4.pt-4.text-center Filtre sua busca
 
-.col-sm-12.mt-2
-  %select.form-control
-    %option{value: ""}
-      Espécie
-    %option{value: "cao", label: "Cão"}
-    %option{value: "gato", label: "Gato"}
-
-.col-sm-12.mt-2
-  %select.form-control
-    %option{value: ""}
-      Sexo
-    %option{value: "macho", label: "Macho"}
-    %option{value: "femea", label: "Fêmea"}
-
-.col-sm-12.mt-2
-  %select.form-control
-    %option{value: ""}
-      Porte
-    %option{value: "pequeno", label: "Pequeno"}
-    %option{value: "medio", label: "Médio"}
-    %option{value: "grande", label: "Grande"}
-
-.col-sm-12.mt-2
-  %select.form-control
-    %option{value: ""}
-      Pelagem
-    %option{value: "curto", label: "Curto"}
-    %option{value: "longo", label: "Longo"}
-    %option{value: "encaracolado", label: "Encaracolado"}
-    %option{value: "dupla", label: "Dupla"}
-    %option{value: "longo e curto", label: "Longo e Curto"}
-
-.col-sm-12.mt-2
-  %select.form-control
-    %option{value: ""}
-      Cor
-    %option{value: "preto", label: "Preto"}
-    %option{value: "branco", label: "Branco"}
-    %option{value: "alaranjado", label: "Alaranjado"}
-    %option{value: "caramelo", label: "Caramelo"}
-    %option{value: "rajado", label: "Rajado"}
+= search_form_for @q, url: animais_path do |f|
+  = f.search_field :name_cont, class: "form-control", placeholder: 'Nome'
+  = f.submit "Buscar", class: "btn btn-primary"
