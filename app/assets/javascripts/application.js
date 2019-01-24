@@ -13,7 +13,19 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require chosen
 //= require_tree .
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+
+function chosen_init() {
+  $(".chosen-select").chosen().change(
+    function(){
+      var donation = $('option:selected',this);
+    }
+  );
+}
+
+$(document).on('turbolinks:load', function(){chosen_init()});
