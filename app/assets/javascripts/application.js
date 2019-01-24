@@ -1,31 +1,23 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, or any plugin's
-// vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file. JavaScript code in this file should be added after the last require_* statement.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require chosen
 //= require_tree .
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
 
-
-function chosen_init() {
-  $(".chosen-select").chosen().change(
-    function(){
-      var donation = $('option:selected',this);
+$(document).ready(function () {
+  $(".chosen_select").change(function () {
+    switch (this.value) {
+      case "financeira":
+        $(".description").hide();
+        $("#resposta").html("<h1>Doação Financeira</h1>");
+        break;
+      case "medicamento":
+        $("#resposta").html("<h1>Doação de Medicamentos</h1>");
+        break;
+      default:
+        $("#resposta").html("<h1>Escolha sua doação ao lado</h1>");
     }
-  );
-}
-
-$(document).on('turbolinks:load', function(){chosen_init()});
+  });
+});

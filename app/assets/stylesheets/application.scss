@@ -1,9 +1,3 @@
-/*
-*= require chosen-bootstrap
-*= require_tree .
-*= require_self
-*/
-
 @import "bootstrap";
 @import "home";
 @import "devise/signin";
@@ -27,6 +21,10 @@ body{
   }
   p, li{
     font-family: "Montserrat-Light";
+  }
+  
+  label{
+    font-weight: bold;
   }
 }
 
