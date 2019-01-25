@@ -13,7 +13,7 @@
     = form.select(:donation, @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}, {prompt: "Escolha uma opção"}, {class: "chosen_select form-control"})
     
     .description
-      = form.label "descrição", class:'mt-2'
+      = form.label "descrição (opcional)", class:'mt-2'
       = form.text_area :message, class:'description form-control', placeholder:'Especifique sua doação'
     
     .actions
