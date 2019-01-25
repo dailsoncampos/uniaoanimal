@@ -5,15 +5,21 @@
 		.col-md-4.card
 			%h3.my-3
 				= @animal.name
-			%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
+			%p
+				= @animal.description
 			%h3.my-3 Detalhes do animal
 			%ul
 				%li
 					= @animal.genre.titleize
 				%li
+					= @animal.species.titleize
+				%li
 					= @animal.condition.titleize
-				%li Pelagem
-				%li Vacinação
-				%li Castração
+				%li
+					= @animal.color.titleize
+				%li
+					= @animal.vaccination.present? ? "Sim" : "Não"
+				%li
+					= @animal.castration.present? ? "Sim" : "Não"
 
 			%button.btn.btn-login.btn-lg.mb-2{:type => "button"} Solicitar adoção
