@@ -1,21 +1,20 @@
-= form_with(model: donor, local: true) do |form|
-  - if donor.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(donor.errors.count, "error")
-        prohibited this donor from being saved:
-      %ul
-        - donor.errors.full_messages.each do |message|
-          %li= message
+= form_with(model: donor, local: true, validate: true) do |form|
   .form-control
-    = form.text_field :name, class:'form-control mt-4', placeholder:'Nome Completo'
+    = form.label "nome*", class:'mt-4'
+    = form.text_field :name, class:'form-control', validate: true
   
-    = form.text_field :phone, class:'form-control my-2', placeholder:'Telefone'
+    = form.label "telefone*", class:'mt-2'
+    = form.text_field :phone, class:'form-control', validate: true
   
-    = form.text_field :email, class:'form-control my-2', placeholder:'Email'
+    = form.label "email*", class:'mt-2'
+    = form.text_field :email, class:'form-control', validate: true
 
-    = form.select(:donation, @donations_options_for_select, {}, {class: "form-control my-2"})
-  
-    = form.text_area :message, class:'form-control my-2', placeholder:'Descrição'
+    = form.label "tipo de doação*", class:'mt-2'
+    = form.select(:donation, @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}, {prompt: "Escolha uma opção"}, {class: "chosen_select form-control"})
+    
+    .description
+      = form.label "descrição (opcional)", class:'mt-2'
+      = form.text_area :message, class:'description form-control', placeholder:'Especifique sua doação'
+    
     .actions
-      = form.submit "Confirmar", class:'col-lg-12 mt-2 mb-4 btn btn-lg btn-login'
+      = form.submit "Confirmar", id: "confirmar", class:'col-lg-12 mt-2 mb-4 btn btn-lg btn-login'

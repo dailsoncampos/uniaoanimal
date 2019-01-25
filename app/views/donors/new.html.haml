@@ -1,8 +1,9 @@
 .container
-  .row
+  .row.pt-4
     .col-md-4.form-signin.pt-0.mx-0
       %h1.text-center Colabore
       = render 'form', donor: @donor
-    .col-md-8.mt-5.pt-2
-      -# = image_tag "donate.jpg", class: "img-fluid", src: "donate"
-      = image_tag "capa_uniao_animal.jpg", class: "img-fluid", alt:"", src: "capa_uniao_animal.jpg"
+    .col-md-8#resposta.mt-5
+      .card_donation
+        = image_tag "colaborar.jpg", class: "img-fluid", src: "colaborar.jpg"
+
