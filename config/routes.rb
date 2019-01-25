@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'thanks_donation/index'
   resources :donors
   get '/eventos', to: "events_page#index"
   get '/animais', to: "animals_page#index"
