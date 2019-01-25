@@ -15,11 +15,11 @@ $(document).ready(function () {
         break;
       case "medicamento":
         $(".description").show();
-        $("#resposta").html("<h1>Shellder kyogre honchkrow illumise slugma excadrill klinklang clefable graveler girafarig</h1>");
+        $("#resposta").html("<img src=\"/images/medicamento.jpg\">");
         break;
       case "alimento":
         $(".description").show();
-        $("#resposta").html("<h1>Skorupi nidoking luxio seadra dusknoir abra scrafty sunflora beedrill armaldo</h1>");
+        $("#resposta").html("<img src=\"/images/alimento.jpg\">");
         break;
       case "outro":
         $(".description").show();
