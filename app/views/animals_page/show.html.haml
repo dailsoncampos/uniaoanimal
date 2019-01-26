@@ -1,25 +1,36 @@
 .container
 	.row.mb-4
 		.col-md-8
-			%img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
+			-# %img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
+			= image_tag @animal.image.variant(resize: "750x500>"), class: "img-fluid"
 		.col-md-4.card
-			%h3.my-3
-				= @animal.name
-			%p
-				= @animal.description
+			%h3.my-3= @animal.name
+			%p= @animal.description
+
 			%h3.my-3 Detalhes do animal
-			%ul
-				%li
-					= @animal.gender.titleize
-				%li
-					= @animal.specie.titleize
-				%li
-					= @animal.condition.titleize
-				%li
-					= @animal.color.titleize
-				%li
-					= @animal.vaccination.present? ? "Sim" : "Não"
-				%li
-					= @animal.castration.present? ? "Sim" : "Não"
+
+			%p 
+				%strong Sexo:
+				#{@animal.gender.titleize}
+
+			%p 
+				%strong Espécie:
+				#{@animal.specie.titleize}
+
+			%p 
+				%strong Condição:
+				#{@animal.condition.titleize}
+
+			%p 
+				%strong Cor:
+				#{@animal.color.titleize}
+
+			%p 
+				%strong Vacinação:
+				#{@animal.vaccination.present? ? "Sim" : "Não"}
+
+			%p 
+				%strong Castração:
+				#{@animal.castration.present? ? "Sim" : "Não"}
 
 			%button.btn.btn-login.btn-lg.mb-2{:type => "button"} Solicitar adoção
