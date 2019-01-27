@@ -12,22 +12,28 @@ $(document).ready(function () {
       case "financeira":
         $(".description").hide();
         $("#resposta").html("<h1 class=\"text-center\">ONG UNIÃO ANIMAL</h1><br><h2 class=\"text-center\">BANCO DO BRASIL</h2><br><h3 class=\"text-center\">Agência: 0130-9</h3><br><h3 class=\"text-center\">Conta Corrente: 95.715-1</h3><br><h3 class=\"text-center\">CNPJ: 23.567.091/0001-30</h3>");
+        $("#resposta-alimento").hide();
+        $("#resposta-medicamento").hide();
+        $("#resposta").show();
         break;
       case "medicamento":
         $(".description").show();
-        $("#resposta").html("<img src=\"/images/medicamento.jpg\">");
+        $("#resposta").hide();
+        $("#resposta-alimento").hide();
+        $("#resposta-medicamento").show();
         break;
       case "alimento":
         $(".description").show();
-        $("#resposta").html("<img src=\"/images/alimento.jpg\">");
+        $("#resposta").hide();
+        $("#resposta-medicamento").hide();
+        $("#resposta-alimento").show();
         break;
       case "outro":
         $(".description").show();
-        $("#resposta").html("<h1>Shiftry doduo torterra ambipom azelf zigzagoon krookodile spinarak floatzel drapion</h1>");
         break;
       default:
         $(".description").show();
-        $("#resposta").html("<h1>Growlithe sneasel typhlosion gabite groudon lunatone snover swellow togepi vanilluxe</h1>");
+        $("#resposta").show();
     }
   });
 });
