@@ -1,0 +1,11 @@
+.container
+  - if notice.present?
+    .alert-success
+      = notice
+  .row
+    .col-md-12
+      = image_tag "muito-obrigado.jpg", class: "img-fluid", src: "muito-obrigado.jpg"
+    .col-md-6
+      %a.btn.btn-primary{:href => "/"} Voltar para a página inicial
+    .col-md-6
+      %a.btn.btn-primary{:href => "/donors/new"} Realizar outra adoção

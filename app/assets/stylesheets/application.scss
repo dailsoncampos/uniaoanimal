@@ -22,6 +22,10 @@ body{
   p, li{
     font-family: "Montserrat-Light";
   }
+  
+  label{
+    font-weight: bold;
+  }
 }
 
 .card{
@@ -61,4 +65,8 @@ body{
 
 .pagination {
   margin-bottom: 30px;
+}
+
+#resposta{
+  margin: 0 auto;
 }

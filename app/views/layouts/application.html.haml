@@ -4,10 +4,10 @@
     %meta{:charset => "utf-8"}
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
 
-    %link{:href => "application.scss", :rel => "stylesheet"}
     %title União Animal
-
-    = stylesheet_link_tag    'application', media: 'all'
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header
       = render 'layouts/navbar'

@@ -15,8 +15,8 @@ puts "Criando cadastro de animais"
   100.times do |i|
     Animal.create!(
       name: Faker::Dog.name,
-      species: [:cachorro, :gato].sample,
-      genre: ["macho", "femea"].sample,
+      specie: [:cachorro, :gato].sample,
+      gender: ["macho", "femea"].sample,
       condition: [:filhote, :adulto, :idoso, :especial].sample,
       status: "disponivel",
       agent_id: Agent.first.id

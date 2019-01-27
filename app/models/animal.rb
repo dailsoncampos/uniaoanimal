@@ -6,10 +6,9 @@ class Animal < ApplicationRecord
   has_one_attached :image
 
   enum condition: [:filhote, :adulto, :idoso, :especial]
-  enum species: [:cachorro, :gato]
-  enum pelage: [:curto, :longo, :encaracolado, :dupla, :longo_e_curto]
+  enum specie: [:cachorro, :gato]
   enum color: [:preto, :branco, :alaranjado, :caramelo, :rajado]
-  enum genre: [:macho, :femea]
+  enum gender: [:macho, :femea]
   enum size: [:pequeno, :medio, :grande]
   enum status: [:disponivel, :indisponivel]
 end
