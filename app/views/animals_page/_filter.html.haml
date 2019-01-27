@@ -1,8 +1,9 @@
 %h3.my-4.pt-4.text-center Filtre sua busca
 
 = search_form_for @q, url: animais_path do |f|
-  = f.select(:species_eq, Animal.species.to_a.map { |w| [w[0].humanize, w[1]] }, {},  {class: "form-control my-2"})
-  = f.select(:genre_eq, Animal.genres.to_a.map { |w| [w[0].humanize, w[1]] }, {}, {class: "form-control my-2"})
-  = f.select(:condition_eq, Animal.conditions.to_a.map { |w| [w[0].humanize, w[1]] }, {}, {class: "form-control my-2"})
-  = f.select(:color_eq, Animal.colors.to_a.map { |w| [w[0].humanize, w[1]] }, {}, {class: "form-control my-2"})
+  = f.select(:specie_eq, Animal.species.to_a.map { |w| [w[0].humanize, w[1]] }, {prompt: "ESPÉCIE"},  {class: "form-control my-2"})
+  = f.select(:gender_eq, Animal.genders.to_a.map { |w| [w[0].humanize, w[1]] }, {prompt: "SEXO"}, {class: "form-control my-2"})
+  = f.select(:condition_eq, Animal.conditions.to_a.map { |w| [w[0].humanize, w[1]] }, {prompt: "CONDIÇÃO"}, {class: "form-control my-2"})
+  = f.select(:color_eq, Animal.colors.to_a.map { |w| [w[0].humanize, w[1]] }, {prompt: "COR"}, {class: "form-control my-2"})
+  = f.select(:size_eq, Animal.sizes.to_a.map { |w| [w[0].humanize, w[1]] }, {prompt: "TAMANHO"}, {class: "form-control my-2"})
   = f.submit class:'col-lg-12 mt-2 mb-4 btn btn-lg btn-login'
