@@ -1,7 +1,8 @@
 .container
 	.row.mb-4
 		.col-md-8
-			%img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
+			= image_tag @animal.image.variant(resize: "750x500>"), class: "img-fluid"
+			-# %img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
 		.col-md-4.card
 			%h3.my-3
 				= @animal.name
