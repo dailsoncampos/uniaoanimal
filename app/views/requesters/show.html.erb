@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @requester.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @requester.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @requester.phone %>
+</p>
+
+<p>
+  <strong>Identify:</strong>
+  <%= @requester.identify %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @requester.cpf %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @requester.street %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @requester.number %>
+</p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @requester.sector %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @requester.city %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @requester.zip %>
+</p>
+
+<p>
+  <strong>Referency point:</strong>
+  <%= @requester.referency_point %>
+</p>
+
+<p>
+  <strong>Residence:</strong>
+  <%= @requester.residence %>
+</p>
+
+<p>
+  <strong>Fenced plot:</strong>
+  <%= @requester.fenced_plot %>
+</p>
+
+<%= link_to 'Edit', edit_requester_path(@requester) %> |
+<%= link_to 'Back', requesters_path %>

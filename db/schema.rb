@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_26_163305) do
+ActiveRecord::Schema.define(version: 2019_01_28_094754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,12 +104,40 @@ ActiveRecord::Schema.define(version: 2019_01_26_163305) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "requesters", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "identify"
+    t.string "cpf"
+    t.string "street"
+    t.string "number"
+    t.integer "sector"
+    t.string "city"
+    t.string "zip"
+    t.string "referency_point"
+    t.integer "residence"
+    t.boolean "fenced_plot"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tutors", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "identify"
+    t.string "cpf"
+    t.string "street"
+    t.string "number"
+    t.integer "sector"
+    t.string "city"
+    t.string "zip"
+    t.string "referency_point"
+    t.integer "residence"
+    t.boolean "fenced_plot"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
