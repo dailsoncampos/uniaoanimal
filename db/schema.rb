@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_094754) do
+ActiveRecord::Schema.define(version: 2019_01_29_003236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 2019_01_28_094754) do
     t.text "description"
     t.boolean "vaccination"
     t.boolean "castration"
+    t.string "breed"
+    t.integer "vermifugation"
     t.index ["agent_id"], name: "index_animals_on_agent_id"
     t.index ["slug"], name: "index_animals_on_slug", unique: true
   end
