@@ -33,4 +33,6 @@
 				%strong Castração:
 				#{@animal.castration.present? ? "Sim" : "Não"}
 
-			%a.btn.btn-primary.btn-lg.mb-2{:href => "/requesters/new"} Solicitar adoção
+			= link_to new_requester_path(animal_id: @animal.id) do
+				%button.btn.btn-primary.btn-lg.mb-2
+					Solicitar adoção

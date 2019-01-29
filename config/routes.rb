@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :adoptions
   resources :requesters
   get 'thanks_donation/index'
   resources :donors
