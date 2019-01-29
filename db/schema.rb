@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_094754) do
+ActiveRecord::Schema.define(version: 2019_01_29_012158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 2019_01_28_094754) do
 
   create_table "animals", force: :cascade do |t|
     t.string "name"
-    t.integer "condition"
+    t.integer "age_group"
     t.integer "specie"
-    t.integer "color"
+    t.string "color"
     t.integer "gender"
     t.integer "size"
     t.integer "status"
@@ -69,6 +69,10 @@ ActiveRecord::Schema.define(version: 2019_01_28_094754) do
     t.text "description"
     t.boolean "vaccination"
     t.boolean "castration"
+    t.string "breed"
+    t.integer "vermifugation"
+    t.boolean "special_care"
+    t.string "kind_of_special_care"
     t.index ["agent_id"], name: "index_animals_on_agent_id"
     t.index ["slug"], name: "index_animals_on_slug", unique: true
   end
@@ -120,24 +124,6 @@ ActiveRecord::Schema.define(version: 2019_01_28_094754) do
     t.boolean "fenced_plot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "tutors", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "identify"
-    t.string "cpf"
-    t.string "street"
-    t.string "number"
-    t.integer "sector"
-    t.string "city"
-    t.string "zip"
-    t.string "referency_point"
-    t.integer "residence"
-    t.boolean "fenced_plot"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -8,6 +8,7 @@ class Animal < ApplicationRecord
   enum age_group: [:filhote, :jovem, :adulto, :idoso]
   enum specie: [:cachorro, :gato]
   enum gender: [:macho, :femea]
-  enum size: [:pequeno, :medio, :grande]
+  enum size: [:mini, :pequeno, :medio, :grande, :gigante]
   enum status: [:disponivel, :indisponivel]
+  enum vermifugation: [:sim, :não, :sem_informação]
 end
