@@ -15,7 +15,7 @@
             %p
               = animal.gender
             %p
-              = animal.condition
+              = animal.age_group
 
 .pagination.justify-content-center
   = will_paginate @animals_found, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

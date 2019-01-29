@@ -5,9 +5,8 @@ class Animal < ApplicationRecord
   belongs_to :agent
   has_one_attached :image
 
-  enum condition: [:filhote, :adulto, :idoso, :especial]
+  enum age_group: [:filhote, :jovem, :adulto, :idoso]
   enum specie: [:cachorro, :gato]
-  enum color: [:preto, :branco, :alaranjado, :caramelo, :rajado]
   enum gender: [:macho, :femea]
   enum size: [:pequeno, :medio, :grande]
   enum status: [:disponivel, :indisponivel]
