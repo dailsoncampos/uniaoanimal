@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-md-8.text-center.alert.alert-danger.mx-auto
+      %h4
+        Abandonar ou maltratar animais é crime!
+        %br
+        Pena: 3 meses à 1 ano de detenção e multa ( Lei 9605/98 )
+  .row.pt-4
+    .col-md-12
+      %h1.text-center Termo de posse responsável
+    .col-md-2
+    .col-md-8
+      = render 'form', requester: @requester
+    .col-md-2
