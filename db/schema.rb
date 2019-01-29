@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_29_003236) do
+ActiveRecord::Schema.define(version: 2019_01_29_010723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 2019_01_29_003236) do
 
   create_table "animals", force: :cascade do |t|
     t.string "name"
-    t.integer "condition"
+    t.integer "age_group"
     t.integer "specie"
-    t.integer "color"
+    t.string "color"
     t.integer "gender"
     t.integer "size"
     t.integer "status"
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 2019_01_29_003236) do
     t.boolean "castration"
     t.string "breed"
     t.integer "vermifugation"
+    t.boolean "special_care"
+    t.string "kind_of_special_care"
     t.index ["agent_id"], name: "index_animals_on_agent_id"
     t.index ["slug"], name: "index_animals_on_slug", unique: true
   end
