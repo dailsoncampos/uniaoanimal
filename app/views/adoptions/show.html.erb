@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @adoption.status %>
+</p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @adoption.animal %>
+</p>
+
+<p>
+  <strong>Requesters:</strong>
+  <%= @adoption.requesters %>
+</p>
+
+<%= link_to 'Edit', edit_adoption_path(@adoption) %> |
+<%= link_to 'Back', adoptions_path %>

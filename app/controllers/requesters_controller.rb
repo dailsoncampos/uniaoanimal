@@ -24,10 +24,12 @@ class RequestersController < ApplicationController
   # POST /requesters
   # POST /requesters.json
   def create
-    @requester = Requester.new(requester_params)
+    @requester = Requester.new(requester_params.except(:animal_id))
 
     respond_to do |format|
       if @requester.save
+        request_hash = requester_params.to_h
+        Adoption.create(requester_id: @requester.id, animal_id: request_hash[:animal_id].to_i)
         format.html { redirect_to @requester, notice: 'Requester was successfully created.' }
         format.json { render :show, status: :created, location: @requester }
       else
@@ -69,6 +71,6 @@ class RequestersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requester_params
-      params.require(:requester).permit(:name, :email, :phone, :identify, :cpf, :street, :number, :sector, :city, :zip, :referency_point, :residence, :fenced_plot)
+      params.require(:requester).permit(:name, :email, :phone, :identify, :cpf, :street, :number, :sector, :city, :zip, :referency_point, :residence, :fenced_plot, :animal_id)
     end
 end

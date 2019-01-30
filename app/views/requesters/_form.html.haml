@@ -8,6 +8,7 @@
         - requester.errors.full_messages.each do |message|
           %li= message
   .form-row.field
+    = form.hidden_field :animal_id, value: params[:animal_id]
     = form.label :nome, class:'mt-2'
     = form.text_field :name, class:'form-control', validate: true
   .form-row 
