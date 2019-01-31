@@ -1,5 +1,6 @@
 class RequestersController < ApplicationController
   before_action :set_requester, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /requesters
   # GET /requesters.json
