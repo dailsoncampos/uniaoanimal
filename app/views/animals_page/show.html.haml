@@ -34,5 +34,5 @@
 				#{@animal.castration.present? ? "Sim" : "Não"}
 
 			= link_to new_requester_path(animal_id: @animal.id) do
-				%button.btn.btn-primary.btn-lg.mb-2
+				%button.col-lg-12.btn.btn-primary.btn-lg.mb-2
 					Solicitar adoção

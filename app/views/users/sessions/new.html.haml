@@ -1,0 +1,12 @@
+.form-signin.mt-5
+  %h1.h3.mb-3.font-weight-normal.text-center Entrar
+  = form_for(resource, class: "form-signin", as: resource_name, url: session_path(resource_name)) do |f|
+    = f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control', placeholder:'e-mail'
+    = f.password_field :password, class:'form-control', placeholder:'senha'
+    - if devise_mapping.rememberable?
+      = f.check_box :remember_me, as: :boolean, checked: :checked, class: "checkbox"
+      = f.label :remember_me
+    .actions
+      = f.submit "Confirmar", class:'col-lg-12 btn btn-lg btn-login'
+  .text-center
+    = link_to "Criar conta", new_user_registration_path
