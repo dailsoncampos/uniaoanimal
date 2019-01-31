@@ -3,12 +3,9 @@
     .col-md-4.form-signin.pt-0.mx-0
       %h1.text-center Colabore
       = render 'form', donor: @donor
-    .col-md-8#inicio.mt-5
+    .col-md-8#resposta.mt-5
       .card_donation
         = image_tag "colaborar.jpg", class: "img-fluid", src: "colaborar.jpg"
-
-    .col-md-8#resposta-financeiro.mt-5
-      .card_donation
 
     .col-md-8#resposta-medicamento.mt-5
       .card_donation
@@ -21,4 +18,3 @@
     .col-md-8#resposta-outro.mt-5
       .card_donation
         = image_tag "outro.jpg", class: "img-fluid", src: "outro.jpg"
-
