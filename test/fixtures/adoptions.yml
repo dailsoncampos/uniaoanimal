@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  adopter: one
+  animal: one
+
+two:
+  status: 1
+  adopter: two
+  animal: two
