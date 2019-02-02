@@ -1,0 +1,45 @@
+.container
+  %h1 Bem Vindo
+  %p#notice= notice
+  %p
+    %strong Name:
+    = @adopter.name
+  %p
+    %strong Email:
+    = @adopter.email
+  %p
+    %strong Phone:
+    = @adopter.phone
+  %p
+    %strong Identify:
+    = @adopter.identify
+  %p
+    %strong Cpf:
+    = @adopter.cpf
+  %p
+    %strong Street:
+    = @adopter.street
+  %p
+    %strong Number:
+    = @adopter.number
+  %p
+    %strong Sector:
+    = @adopter.sector
+  %p
+    %strong City:
+    = @adopter.city
+  %p
+    %strong Zip:
+    = @adopter.zip
+  %p
+    %strong Referency point:
+    = @adopter.referency_point
+  %p
+    %strong Residence:
+    = @adopter.residence
+  %p
+    %strong Fenced plot:
+    = @adopter.fenced_plot
+  -# = link_to 'Edit', edit_adopter_path(@adopter)
+  -# |
+  -# \#{link_to 'Back', adopters_path}

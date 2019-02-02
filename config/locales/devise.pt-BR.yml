@@ -2,6 +2,9 @@ pt-BR:
   activerecord:
     attributes:
       agent:
+        name: Nome
+        phone: Telefone
+        category: Categoria
         confirmation_sent_at: Confirmação enviada em
         confirmation_token: Token de confirmação
         confirmed_at: Confirmado em
@@ -25,8 +28,69 @@ pt-BR:
         unconfirmed_email: E-mail não confirmado
         unlock_token: Token de desbloqueio
         updated_at: Atualizado em
+      adoption:
+        requester: Requisitante
+        created_at: Criado em
+        updated_at: Atualizado em
+      adopter:
+        remember_created_at: Lembrar criado em
+        remember_me: Lembre-se de mim
+        reset_password_sent_at: Resetar senha enviado em
+        reset_password_token: Resetar token de senha
+        name: Nome
+        phone: Telefone
+        identify: Identidade
+        cpf: CPF
+        street: Endereço
+        number: Número
+        sector: Bairro
+        city: Cidade
+        zip: CEP
+        referency_point: Ponto de referência
+        residence: Residência
+        fenced_plot: Terreno cercado
+        created_at: Criado em
+        updated_at: Atualizado em
+      animal:
+        name: Nome
+        age_group: Faixa Etária
+        specie: Espécie
+        color: Cor
+        gender: Gênero
+        size: Porte
+        agent: Doador
+        created_at: Criado em
+        updated_at: Atualizado em
+        description: Descrição
+        vaccination: Vacinação
+        castration: Castração
+        breed: Raça
+        vermifugation: Vermifugação
+        special_care: Cuidado Especial
+        kind_of_special_care: Tipo de cuidado especial
+        image: Imagem
+      donor:
+        name: Nome
+        phone: Telefone
+        donation: Doação
+        message: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+      event:
+        title: Título
+        place: Lugar
+        date: Data
+        time: Horário
+        rmk: Nota
+        created_at: Criado em
+        updated_at: Atualizado em
+        image: Imagem
     models:
-      agent: Agente
+      agent: Agentes
+      adopter: Tutores
+      donor: Doador
+      event: Eventos
+      adoption: Adoção
   devise:
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso. Você está logado."

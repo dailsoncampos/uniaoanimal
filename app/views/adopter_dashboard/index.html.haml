@@ -1,0 +1,21 @@
+.container
+  %h1.mt-4 
+    = @adopter.name
+  .row.my-5
+    .col-md-6.mb-4
+      .card.h-100
+        .card-body
+          %h2.card-title Dados pessoais
+          %p.card-text Aqui você pode ver suas informações como: Endereço, Telefone, etc.
+        .card-footer
+          = link_to usuario_info_path do
+            %button.btn.btn-primary Ver informações pessoais
+
+    .col-md-6.mb-4
+      .card.h-100
+        .card-body
+          %h2.card-title Dados da conta
+          %p.card-text Aqui você pode alterar as informações da conta como: email e senha.
+        .card-footer
+          = link_to edit_adopter_password_path do
+            %button.btn.btn-primary Ver informações da conta

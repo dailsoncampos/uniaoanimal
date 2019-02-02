@@ -1,0 +1,82 @@
+.container
+  .row
+    .col-lg-12
+      %h2 Cadastro
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form|
+        = devise_error_messages!
+        .form-row.field
+          = form.label :nome, class:'mt-2'
+          = form.text_field :name, class:'form-control', validate: true
+        .form-row
+          = form.label :telephone, class:'mt-2'
+          = form.text_field :phone, class:'form-control', validate: true
+        .form-row 
+          .field.col-md-4
+            = form.label :email, class:'mt-2'
+            = form.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
+          .field.col-md-4
+            = form.label :senha, class:'mt-2'
+            - if @minimum_password_length
+              %em
+                (Mínimo de #{@minimum_password_length} caracteres)
+            %br
+            = form.password_field :password, autocomplete: "new-password", class: "form-control"
+          .field.col-md-4
+            = form.label :confirmar_senha, class:'mt-2'
+            %br
+            = form.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"
+        .form-row
+          .field.col-md-6
+            = form.label :identidade, class:'mt-2'
+            = form.text_field :identify, class:'form-control', validate: true
+          .field.col-md-6
+            = form.label :cpf, class:'mt-2'
+            = form.text_field :cpf, class:'form-control', validate: true
+
+        .form-row
+          .field.col-md-6
+            = form.label :endereço, class:'mt-2'
+            = form.text_field :street, class:'form-control', validate: true
+          .field.col-md-2
+            = form.label :número, class:'mt-2'
+            = form.text_field :number, class:'form-control', validate: true
+          .field.col-md-4
+            = form.label :bairro, class:'mt-2'
+            = form.select(:sector, @sectors_options_for_select = Adopter.sectors.keys.map {|sector| [sector.titleize,sector]}, {prompt: "Selecione o seu bairro"}, {class: "chosen_select form-control"})
+
+        .form-row
+          .field.col-md-4
+            = form.label :cidade, class:'mt-2'
+            = form.text_field :city, class:'form-control', validate: true
+          .field.col-md-2
+            = form.label :cep, class:'mt-2'
+            = form.text_field :zip, class:'form-control', validate: true
+          .field.col-md-6
+            = form.label :ponto_de_referência, class:'mt-2'
+            = form.text_field :referency_point, class:'form-control', validate: true
+
+        .form-row
+          .field.col-md-6
+            = form.label :tipo_de_residência, class:'mt-2'
+            %br
+            = form.radio_button :residence, 'apartamento'
+            = form.label :apartamento
+            %br
+            = form.radio_button :residence, 'casa'
+            = form.label :casa
+            %br
+            = form.radio_button :residence, 'empresa'
+            = form.label :empresa
+
+          .field.col-md-6
+            = form.label :terreno_cercado?, class:'mt-2'
+            %br
+            = form.radio_button :fenced_plot, 'sim'
+            = form.label :sim
+            %br
+            = form.radio_button :fenced_plot, 'não'
+            = form.label :não
+
+        .form-row
+          .col-md-12.text-center
+            = form.submit "Confirmar", class:'col-lg-4 mt-2 mb-4 btn btn-lg btn-login'
