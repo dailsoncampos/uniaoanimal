@@ -1,0 +1,12 @@
+.container
+  %h1 Solicitação de adoção
+  -# .col-md-12.mb-4
+  -#   = render 'animal_data', adoption: @adoption
+  -# .col-md-12.mb-4
+  -#   = render 'adopter_data', adoption: @adoption
+  .col-md-12.mb-4
+    = render 'clausula'
+    -# = link_to new_adoption_path(animal_id: @animal.id) do
+  .text-center
+    %button.col-lg-12.btn.btn-primary.btn-lg.mb-2
+      Solicitar adoção

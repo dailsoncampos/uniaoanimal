@@ -1,0 +1,20 @@
+= form_with(model: adoption, local: true) do |form|
+  - if adoption.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(adoption.errors.count, "error")
+        prohibited this adoption from being saved:
+      %ul
+        - adoption.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :status
+    = form.number_field :status
+  .field
+    = form.label :adopter_id
+    = form.text_field :adopter_id
+  .field
+    = form.label :animal_id
+    = form.text_field :animal_id
+  .actions
+    = form.submit

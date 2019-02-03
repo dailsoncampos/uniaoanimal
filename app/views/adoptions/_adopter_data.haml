@@ -1,0 +1,43 @@
+%h1.mt-4 
+.row.my-5
+  .col-md-12.mb-4
+    .card.h-100
+      .card-body
+        %h2.card-title Dados do solicitante
+        %h3.my-3= @adopter.name
+        %p
+          %strong Email:
+          = @adopter.email
+        %p
+          %strong Telefone:
+          = @adopter.phone
+        %p
+          %strong Identidade:
+          = @adopter.identify
+        %p
+          %strong CPF:
+          = @adopter.cpf
+        %p
+          %strong Rua:
+          = @adopter.street
+        %p
+          %strong Número:
+          = @adopter.number
+        %p
+          %strong Bairro:
+          = @adopter.sector
+        %p
+          %strong Cidade:
+          = @adopter.city
+        %p
+          %strong CEP:
+          = @adopter.zip
+        %p
+          %strong Ponto de referência:
+          = @adopter.referency_point
+        %p
+          %strong Residência:
+          = @adopter.residence
+        %p
+          %strong Terreno cercado:
+          #{@adopter.fenced_plot.present? ? "Sim" : "Não"}

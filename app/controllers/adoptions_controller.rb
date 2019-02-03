@@ -1,28 +1,20 @@
 class AdoptionsController < ApplicationController
   before_action :set_adoption, only: [:show, :edit, :update, :destroy]
 
-  # GET /adoptions
-  # GET /adoptions.json
   def index
     @adoptions = Adoption.all
   end
 
-  # GET /adoptions/1
-  # GET /adoptions/1.json
   def show
   end
 
-  # GET /adoptions/new
   def new
     @adoption = Adoption.new
   end
 
-  # GET /adoptions/1/edit
   def edit
   end
 
-  # POST /adoptions
-  # POST /adoptions.json
   def create
     @adoption = Adoption.new(adoption_params.except(:animal_id))
 
@@ -30,7 +22,7 @@ class AdoptionsController < ApplicationController
       if @adoption.save
         adopt_hash = adopter_params.to_h
         Adoption.create(adopter_id: @adopter.id, animal_id: adopt_hash[:animal_id].to_i)
-        format.html { redirect_to @adoption, notice: 'Adoption was successfully created.' }
+        format.html { redirect_to @adoption, notice: 'Solicitação de adoção realizada com sucesso!' }
         format.json { render :show, status: :created, location: @adoption }
       else
         format.html { render :new }
@@ -39,8 +31,6 @@ class AdoptionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /adoptions/1
-  # PATCH/PUT /adoptions/1.json
   def update
     respond_to do |format|
       if @adoption.update(adoption_params)
@@ -53,8 +43,6 @@ class AdoptionsController < ApplicationController
     end
   end
 
-  # DELETE /adoptions/1
-  # DELETE /adoptions/1.json
   def destroy
     @adoption.destroy
     respond_to do |format|
@@ -64,13 +52,11 @@ class AdoptionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_adoption
-      @adoption = Adoption.find(params[:id])
-    end
+  def set_adoption
+    @adoption = Adoption.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def adoption_params
-      params.require(:adoption).permit(:status, :adopter_id, :animal_id)
-    end
+  def adoption_params
+    params.require(:adoption).permit(:status, :adopter_id, :animal_id)
+  end
 end
