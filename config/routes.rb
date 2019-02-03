@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/sobre', to: "static_page#about"
+  get '/contato', to: "static_page#contact"
   root to: 'home#index'
   devise_for :agents
   devise_for :adopters, path: 'usuario', controllers: { sessions: "adopters/sessions", registrations: "adopters/registrations", passwords: "adopters/passwords"}
