@@ -12,10 +12,8 @@
             %span.sr-only (current)
         %li.nav-item.py-4.px-3
           %a.nav-link{:href => "/sobre"} Sobre
-        %li.nav-item.py-4.px-3
-          %a.nav-link{:href => "/contato"} Contato
         -# %li.nav-item.py-4.px-3
-        -#   %a.nav-link{:href => "/dashboard"} Área administritativa
+        -#   = link_to "Contato", new_contact_path, method: :delete, :class => 'nav-link'
         - if adopter_signed_in?
           %li.nav-item.py-4.px-3
             = link_to "Sair", destroy_adopter_session_path, method: :delete, :class => 'nav-link'
