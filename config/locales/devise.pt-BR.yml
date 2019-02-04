@@ -51,6 +51,8 @@ pt-BR:
         unconfirmed_email: E-mail não confirmado
         unlock_token: Token de desbloqueio
         updated_at: Atualizado em
+        street: Endereço
+        sector: Bairro
       animal:
         name: Nome
         age_group: Faixa Etária
@@ -88,7 +90,7 @@ pt-BR:
     models:
       agent: Agentes
       adopter: Tutores
-      donor: Doador
+      donor: Doações
       event: Eventos
       adoption: Adoções
   devise:
