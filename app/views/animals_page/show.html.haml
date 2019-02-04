@@ -1,7 +1,6 @@
 .container
 	.row.mb-4
 		.col-md-8
-			-# %img.img-fluid{:alt => "", :src => "http://placehold.it/750x500"}
 			= image_tag @animal.image.variant(resize: "750x500>"), class: "img-fluid"
 		.col-md-4.card
 			%h3.my-3= @animal.name
@@ -33,6 +32,6 @@
 				%strong Castração:
 				#{@animal.castration.present? ? "Sim" : "Não"}
 
-			= link_to new_adopter_session_path(animal_id: @animal.id) do
+			= link_to new_adoption_path(animal_id: @animal.id) do
 				%button.col-lg-12.btn.btn-primary.btn-lg.mb-2
 					Solicitar adoção

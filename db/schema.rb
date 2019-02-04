@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_02_124429) do
+ActiveRecord::Schema.define(version: 2019_02_02_165253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 2019_02_02_124429) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_adopters_on_email", unique: true
     t.index ["reset_password_token"], name: "index_adopters_on_reset_password_token", unique: true
+  end
+
+  create_table "adoptions", force: :cascade do |t|
+    t.integer "status"
+    t.bigint "adopter_id"
+    t.bigint "animal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["adopter_id"], name: "index_adoptions_on_adopter_id"
+    t.index ["animal_id"], name: "index_adoptions_on_animal_id"
   end
 
   create_table "agents", force: :cascade do |t|
@@ -145,5 +155,7 @@ ActiveRecord::Schema.define(version: 2019_02_02_124429) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "adoptions", "adopters"
+  add_foreign_key "adoptions", "animals"
   add_foreign_key "animals", "agents"
 end

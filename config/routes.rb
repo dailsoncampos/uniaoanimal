@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :adoptions
   root to: 'home#index'
   devise_for :agents
   devise_for :adopters, path: 'usuario', controllers: { sessions: "adopters/sessions", registrations: "adopters/registrations", passwords: "adopters/passwords"}

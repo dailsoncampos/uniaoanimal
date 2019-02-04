@@ -1,0 +1,12 @@
+.form-signin.mt-5
+  %h1 Esqueceu sua senha?
+  = form_for(resource, class: "form-signin", as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = devise_error_messages!
+    .field
+      = f.label :email
+      %br
+      = f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control', placeholder:'e-mail'
+    .actions
+      = f.submit "Recuperar senha", class:'col-lg-12 btn btn-lg btn-login mt-4'
+    .text-center
+      = render "adopters/shared/links"

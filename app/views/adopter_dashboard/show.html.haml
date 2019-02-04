@@ -39,7 +39,6 @@
     = @adopter.residence
   %p
     %strong Fenced plot:
-    = @adopter.fenced_plot
-  -# = link_to 'Edit', edit_adopter_path(@adopter)
-  -# |
-  -# \#{link_to 'Back', adopters_path}
+    #{@adopter.fenced_plot.present? ? "Sim" : "Não"}
+
+  = link_to 'Editar meus dados', edit_adopter_registration_path(@adopter)

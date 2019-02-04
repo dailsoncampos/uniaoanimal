@@ -1,0 +1,31 @@
+%h1.mt-4 
+.row.my-5
+  .col-md-12.mb-4
+    .card.h-100
+      .card-body
+        %h2.card-title Dados do animal
+        %h3.my-3
+          = @animal.name
+        %p 
+          %strong Sexo:
+          #{@animal.gender.titleize}
+
+        %p 
+          %strong Espécie:
+          #{@animal.specie.titleize}
+
+        %p 
+          %strong Faixa Etária:
+          #{@animal.age_group.titleize}
+
+        %p 
+          %strong Cor:
+          #{@animal.color.titleize}
+
+        %p 
+          %strong Vacinação:
+          #{@animal.vaccination.present? ? "Sim" : "Não"}
+
+        %p 
+          %strong Castração:
+          #{@animal.castration.present? ? "Sim" : "Não"}
