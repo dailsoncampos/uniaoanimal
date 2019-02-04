@@ -1,20 +1,22 @@
-= form_with(model: adoption, local: true) do |form|
-  - if adoption.errors.any?
+= form_with(model: @adoption, local: true) do |form|
+  - if @adoption.errors.any?
     #error_explanation
       %h2
-        = pluralize(adoption.errors.count, "error")
+        = pluralize(@adoption.errors.count, "error")
         prohibited this adoption from being saved:
       %ul
-        - adoption.errors.full_messages.each do |message|
+        - @adoption.errors.full_messages.each do |message|
           %li= message
-  .field
+  .field.d-none
     = form.label :status
-    = form.number_field :status
-  .field
+    = form.number_field :status, value: "pendente"
+  .field.d-none
     = form.label :adopter_id
-    = form.text_field :adopter_id
-  .field
+    = form.text_field :adopter_id, value: "#{current_adopter.id}"
+  .field.d-none
     = form.label :animal_id
-    = form.text_field :animal_id
-  .actions
-    = form.submit
+    = form.text_field :animal_id, value: "#{params[:animal_id]}"
+  .col-md-12.mb-4
+    = render 'clausula'
+  .actions.text-center
+    = form.submit "Confirmar solicitação", id: "confirmar", class:'mt-2 mb-4 btn btn-lg btn-login'
