@@ -2,43 +2,43 @@
   %h1 Bem Vindo
   %p#notice= notice
   %p
-    %strong Name:
+    %strong Nome:
     = @adopter.name
   %p
     %strong Email:
     = @adopter.email
   %p
-    %strong Phone:
+    %strong Telefone:
     = @adopter.phone
   %p
-    %strong Identify:
+    %strong Identidade:
     = @adopter.identify
   %p
-    %strong Cpf:
+    %strong CPF:
     = @adopter.cpf
   %p
-    %strong Street:
+    %strong Logradouro:
     = @adopter.street
   %p
-    %strong Number:
+    %strong Número:
     = @adopter.number
   %p
-    %strong Sector:
+    %strong Bairro:
     = @adopter.sector
   %p
-    %strong City:
+    %strong Cidade:
     = @adopter.city
   %p
-    %strong Zip:
+    %strong CEP:
     = @adopter.zip
   %p
-    %strong Referency point:
+    %strong Ponto de referência:
     = @adopter.referency_point
   %p
-    %strong Residence:
+    %strong Residência:
     = @adopter.residence
   %p
-    %strong Fenced plot:
+    %strong Terreno cercado:
     #{@adopter.fenced_plot.present? ? "Sim" : "Não"}
 
   = link_to 'Editar meus dados', edit_adopter_registration_path(@adopter)

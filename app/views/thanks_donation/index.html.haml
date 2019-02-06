@@ -1,13 +1,13 @@
 .container
   - if notice.present?
-  .row
-    .col-md-8.text-center.alert.alert-success.mx-auto
-      = notice
-  .row
-    .col-md-8.mx-auto.my-auto
-      = image_tag "muito-obrigado.jpg", class: "img-fluid", src: "muito-obrigado.jpg"
-  .row.my-5.text-center
-    .col-md-6
-      %a.btn.btn-primary.btn-lg{:href => "/"} Voltar para a página inicial
-    .col-md-6
-      %a.btn.btn-primary.btn-lg{:href => "/donors/new"} Realizar outra adoção
+    .row
+      .col-md-8.text-center.alert.alert-success.mx-auto
+        = notice
+    .row
+      .col-md-8.mx-auto.my-auto
+        = image_tag "muito-obrigado.jpg", class: "img-fluid", src: "muito-obrigado.jpg"
+    .row.my-5.text-center
+      .col-md-6
+        %a.btn.btn-primary.btn-lg{:href => "/"} Voltar para a página inicial
+      .col-md-6
+        %a.btn.btn-primary.btn-lg{:href => "/donors/new"} Realizar outra adoção
