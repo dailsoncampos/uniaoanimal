@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Suggestion Donations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kind</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suggestion_donations.each do |suggestion_donation| %>
+      <tr>
+        <td><%= suggestion_donation.kind %></td>
+        <td><%= suggestion_donation.description %></td>
+        <td><%= link_to 'Show', suggestion_donation %></td>
+        <td><%= link_to 'Edit', edit_suggestion_donation_path(suggestion_donation) %></td>
+        <td><%= link_to 'Destroy', suggestion_donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Suggestion Donation', new_suggestion_donation_path %>

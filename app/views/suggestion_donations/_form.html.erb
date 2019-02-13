@@ -1,0 +1,27 @@
+<%= form_with(model: suggestion_donation, local: true) do |form| %>
+  <% if suggestion_donation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(suggestion_donation.errors.count, "error") %> prohibited this suggestion_donation from being saved:</h2>
+
+      <ul>
+      <% suggestion_donation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.number_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

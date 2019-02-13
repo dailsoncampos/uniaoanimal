@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :suggestion_donations
   resources :adoptions
   root to: 'home#index'
   devise_for :agents

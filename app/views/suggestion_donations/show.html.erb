@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @suggestion_donation.kind %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @suggestion_donation.description %>
+</p>
+
+<%= link_to 'Edit', edit_suggestion_donation_path(@suggestion_donation) %> |
+<%= link_to 'Back', suggestion_donations_path %>
