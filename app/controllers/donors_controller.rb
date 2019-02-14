@@ -1,30 +1,22 @@
 class DonorsController < ApplicationController
   before_action :set_donor, only: [:show, :edit, :update, :destroy]
 
-  # GET /donors
-  # GET /donors.json
   def index
     @donors = Donor.all
   end
 
-  # GET /donors/1
-  # GET /donors/1.json
   def show
   end
 
-  # GET /donors/new
   def new
     @donor = Donor.new
     donation_for_select
   end
 
-  # GET /donors/1/edit
   def edit
     donation_for_select
   end
 
-  # POST /donors
-  # POST /donors.json
   def create
     @donor = Donor.new(donor_params)
 
@@ -39,8 +31,6 @@ class DonorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /donors/1
-  # PATCH/PUT /donors/1.json
   def update
     respond_to do |format|
       if @donor.update(donor_params)
@@ -53,8 +43,6 @@ class DonorsController < ApplicationController
     end
   end
 
-  # DELETE /donors/1
-  # DELETE /donors/1.json
   def destroy
     @donor.destroy
     respond_to do |format|
@@ -68,12 +56,11 @@ class DonorsController < ApplicationController
     def donation_for_select
       @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}
     end
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_donor
       @donor = Donor.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def donor_params
       params.require(:donor).permit(:name, :phone, :email, :donation, :message)
     end

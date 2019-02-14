@@ -10,7 +10,7 @@
     = form.text_field :email, class:'form-control', validate: true
 
     = form.label "tipo de doação*", class:'mt-2'
-    = form.select(:donation, @donations_options_for_select = Donor.donations.keys.map {|donate| [donate.titleize,donate]}, {prompt: "Escolha uma opção"}, {class: "chosen_select form-control"})
+    = form.select(:donation, @donations_options_for_select, {prompt: "Escolha uma opção"}, {class: "chosen_select form-control"})
     
     .description
       = form.label "descrição (opcional)", class:'mt-2'
