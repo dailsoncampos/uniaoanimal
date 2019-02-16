@@ -1,12 +1,8 @@
 # tmp_dir = Rails.root.join("tmp")
 
-Agent.create name: 'Dailson', status: :ativo, category: :tecnico
-Agent.create name: 'Alice', status: :ativo, category: :coordenador
-# Agent.create name: 'Aline', status: :ativo, category: :voluntario
+Agent.create name: 'Admin', status: :ativo, category: :coordenador
 
-Agent.create name: 'Dailson', status: :ativo, category: :tecnico, email: 'dailson@uniaoanimal.org', password: '123456'
-Agent.create name: 'Alice', status: :ativo, category: :coordenador, email: 'alice@uniaoanimal.org', password: '123456'
-# Agent.create name: 'Aline', status: :ativo, category: :voluntario, email: 'aline@uniaoanimal.org', password: '123456'
+Agent.create name: 'Admin', status: :ativo, category: :coordenador, email: 'admin@uniaoanimal.org', password: 'admin'
 
 puts "Criando cadastro de animais"
   100.times do |i|
