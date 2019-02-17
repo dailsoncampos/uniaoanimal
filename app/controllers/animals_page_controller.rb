@@ -7,5 +7,6 @@ class AnimalsPageController < ApplicationController
 
   def show
     @animal = Animal.friendly.find(params[:id])
+    @status = @animal.adoption
   end
 end

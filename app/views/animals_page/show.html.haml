@@ -1,7 +1,8 @@
 .container
 	.row.mb-4
 		.col-md-8
-			= image_tag @animal.image.variant(resize: "750x500>"), class: "img-fluid"
+			-# = image_tag @animal.image.variant(resize: "750x500>"), class: "img-fluid"
+			%img.img-fluid{class: "img-fluid", :alt => "", :src => "http://placehold.it/750x500"}
 		.col-md-4.card
 			%h3.my-3= @animal.name
 			%p= @animal.description
@@ -20,9 +21,9 @@
 				%strong Faixa Etária:
 				#{@animal.age_group.titleize}
 
-			%p 
-				%strong Cor:
-				#{@animal.color.titleize}
+			-# %p 
+			-# 	%strong Cor:
+			-# 	#{@animal.color.titleize}
 
 			%p 
 				%strong Vacinação:
@@ -32,6 +33,10 @@
 				%strong Castração:
 				#{@animal.castration.present? ? "Sim" : "Não"}
 
-			= link_to new_adoption_path(animal_id: @animal.id) do
-				%button.col-lg-12.btn.btn-primary.btn-lg.mb-2
-					Solicitar adoção
+			- unless @status.pendente?
+				= link_to new_adoption_path(animal_id: @animal.id) do
+					%button.col-lg-12.btn.btn-primary.btn-lg.mb-2
+						Solicitar adoção
+			- else
+				= button_tag 'Está em processo de adoção', class: 'btn btn-warning btn-lg mb-2', data: { disable_with: ""} 
+
