@@ -1,3 +1,3 @@
 # tmp_dir = Rails.root.join("tmp")
 
-Agent.create!(name: 'Admin', status: :ativo, category: :coordenador, email: 'admin@uniaoanimal.org', password: 'administracao')
+Agent.create!(name: 'Admin', status: :ativo, category: :coordenador, email: 'admin@uniaoanimal.org', password: 'administracao', password_confirmation: 'administracao')
