@@ -23,8 +23,7 @@ class AdoptionsController < ApplicationController
 
     respond_to do |format|
       if @adoption.save
-        adopt_hash = adoption_params.to_h
-        Adoption.create(adopter_id: current_adopter.id.to_i, animal_id: adopt_hash[:animal_id].to_i)
+        @adoption.animal.indisponivel!
         format.html { redirect_to @adoption, notice: 'Solicitação de adoção realizada com sucesso!' }
         format.json { render :show, status: :created, location: @adoption }
       else

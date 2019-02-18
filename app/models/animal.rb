@@ -1,6 +1,7 @@
 class Animal < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
+  scope :disponivel, -> { where(status: 'disponivel') }
 
   belongs_to :agent
   has_one_attached :image
