@@ -6,8 +6,8 @@
       .card
         .animal-img
           = link_to search_show_path(animal) do
-            = image_tag animal.image.variant(resize: "200x200>"), class: "img-fluid"
-            -# %img.img-fluid{class: "img-fluid", :alt => "", :src => "http://placehold.it/200x200"}
+            -# = image_tag animal.image.variant(resize: "200x200>"), class: "img-fluid"
+            %img.img-fluid{class: "img-fluid", :alt => "", :src => "http://placehold.it/200x200"}
         .animal-description.pl-2.pt-2
           = link_to search_show_path(animal) do
             %h4
