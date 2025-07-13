@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  users_service:
+    build: ./users_service
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db_users
+
+  animals_service:
+    build: ./animals_service
+    ports:
+      - "3002:3000"
+    depends_on:
+      - db_animals
+
+  adoption_service:
+    build: ./adoption_service
+    ports:
+      - "3003:3000"
+    depends_on:
+      - db_adoption
+      - rabbitmq
+
+  admin_service:
+    build: ./admin_service
+    ports:
+      - "3004:3000"
+
+  db_users:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: users_db
+
+  db_animals:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: animals_db
+
+  db_adoption:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: adoption_db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
